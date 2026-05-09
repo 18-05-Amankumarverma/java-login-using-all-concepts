@@ -1,5 +1,6 @@
 import login.InputSanitizer;
 import login.status;
+import java.time.*;
 
 interface auth{
     public String createAccount(String username,String email,String password);
@@ -43,6 +44,8 @@ public class Login implements auth{
 
     public static void main(String[] args) {
         Login lg = new Login();
+        LocalDateTime td =  LocalDateTime.now();
+        System.out.println(td);
         System.out.println(lg.createAccount("aman","aman@gmail.com","aman@123"));
         System.out.println(lg.login("aman@gmail.com","aman@123"));
     }
